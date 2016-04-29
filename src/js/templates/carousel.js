@@ -1,9 +1,6 @@
 import $ from 'jquery';
 // import mapscroll from './templates/mapscroll';
 
-// var bootstrap = require('bootstrap');
-// console.log(bootstrap);
-
 // carousel
 // next button on carousel
  $('#carousel .next a').on("click", function(e){
