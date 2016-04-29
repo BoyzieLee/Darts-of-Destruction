@@ -6,7 +6,6 @@
   pointer-events: none;
 }
 
-
 .logo {
   width: 100px;
   height: auto;
@@ -15,5 +14,54 @@
 
 .brandname {
   display: inline-block;;
+}
 
+#carousel {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+
+  ul {
+    list-style: none;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  li {
+    position: absolute;
+    display: none;
+  }
+
+  li.active {
+    display: inline-block;
+  }
+
+  .prev, .next {
+    background: gray;
+    z-index: 200;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 60px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .prev a, .next a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
 }
