@@ -1,25 +1,25 @@
 import $ from 'jquery';
 
-var shoppingCart = $('.shoppingCart');
+// selecting html element on dom to later insert html
+var productDetails = $('.productDetails');
 
-function product (product) {
+
+function productTemplate (productData) {
   return `
-  <div class="shoppingCart col-sm-5">
-    <h4>titel: ${product.title}</h4>
-    <p class="productDescription">${product.description}</p>
-
-  </div>
+    <h4>${productData.data.product.title}</h4>
+    <p>${productData.data.product.description}</p>
   `;
 }
 
 
-var productURL = $.getJSON('https://json-data.herokuapp.com/darts/info');
+var dataRequest = $.getJSON('https://json-data.herokuapp.com/darts/info');
 
-productURL.then( function (product) {
-  var html = shoppingCart(product);
-  product.append(html);
-  // console.log(product);
+dataRequest.then( function (product) {
+  console.log(product);
+  var html = productTemplate(product);
+  productDetails.append(html);
+
 });
 
 
-export default product;
+export default productTemplate;
