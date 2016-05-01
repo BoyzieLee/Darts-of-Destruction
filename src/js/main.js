@@ -2,11 +2,16 @@
 import $ from 'jquery';
 import carousel from './templates/carousel';
 import testimonials from './templates/testimonials';
+import product from './templates/product';
+
 
 // assign user api url to a variable for later use
 var userURL = 'https://randomuser.me/api/?results=1&gender=';
 // assign testimonial api url to a variable for later use
 var testURL = 'https://json-data.herokuapp.com/darts/testimonials';
+
+// assign product api url to a variable for later use
+// var productURL = 'https://json-data.herokuapp.com/darts/info';
 
 // assign HTML area where template will render profile cards on the page
 // will append results here later
