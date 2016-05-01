@@ -34,6 +34,11 @@ for (var i = 0; i < 3; i++){
   });
 }
 
+var timeoutID = window.setTimeout(console.log(imgArray), 5000);
+
+// make variable to hold testimonials HTML code
+var testimonialsHTML = '';
+
 // make a request for data from testimonials url and store in variable
 var dataRequest = $.getJSON(testURL);
 // upon successful response .then( do ... )
@@ -49,13 +54,19 @@ dataRequest.then( function(res) {
         userObject.name = testimonial.name;
         userObject.review = testimonial.review;
         userObject.testimonialImageURL = imgArray[counter];
+        console.log(userObject);
+        console.log(imgArray);
         // advance the counter
         counter += 1;
-        console.log(userObject);
+
+        var html = testimonials(userObject);
+        testimonialsHTML += html;
   });
 
-});
+  // append each result user card to html section class=cardArea
+  testimonialsArea.append(testimonialsHTML);
 
+});
 
 
 
