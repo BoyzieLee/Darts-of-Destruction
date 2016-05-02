@@ -12,7 +12,7 @@ var userURL = 'https://randomuser.me/api/?results=1&gender=';
 var testURL = 'https://json-data.herokuapp.com/darts/testimonials';
 
 // assign product api url to a variable for later use
-// var productURL = 'https://json-data.herokuapp.com/darts/info';
+// var companies = 'https://json-data.herokuapp.com/darts/companies';
 
 // assign HTML area where template will render profile cards on the page
 // will append results here later
