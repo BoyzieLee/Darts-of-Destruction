@@ -40,7 +40,6 @@ for (var i = 0; i < 3; i++){
 
     // push urls into empty array
     imgArray.push(imageurl);
-    console.log(imgArray);
   });
 }
 
