@@ -1,7 +1,33 @@
+$metalBlue: #4D5EA6;
+$background: #F6F8F7;
+$dardGrey: #686A69;
+
+body {
+  background-color: $background;
+}
 .row  {
   padding: 1em 0px;
 }
 
+h1  {
+  color: $metalBlue;
+}
+h2  {
+  color: $metalBlue;
+}
+p {
+  color: $dardGrey;
+}
+hr {
+  margin: 0;
+  padding: 0;
+  border: 1px solid grey;
+  // background-color: $F6F8F7;
+}
+
+.testimonialsOuter {
+  background-color: #EAECE7;
+}
 .map {
   pointer-events: none;
 }
@@ -63,5 +89,20 @@
 
   .next {
     right: 5px;
+  }
+}
+
+// iframe {
+//   margin: 0;
+//   padding: 0;
+// }
+
+footer {
+  margin: 0;
+  padding: 5px 0;
+  background-color: $metalBlue;
+  text-align: center;
+  p {
+    color: $background;
   }
 }
