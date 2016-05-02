@@ -28,15 +28,16 @@ for (var i = 0; i < 3; i++){
   // create variable for api url w/ correct gender query
   var requrl = userURL + genderArr[i];
   // variable to store the data request
-  var dataRequest = $.getJSON(requrl);
+  var dataRequestUser = $.getJSON(requrl);
   // upon success of data request .then( get image url and push it onto imgArray )
-  dataRequest.then( function(res) {
+  dataRequestUser.then( function(res) {
     // create variable to hold the user data we want to work with, each request returns a response object with user data stored in an array, since we're only requesting one user at a time, this position in the array is always [0]
     var user = res.results[0];
     var imageurl = String(user.picture.medium);
 
     // push urls into empty array
     imgArray.push(imageurl);
+    console.log(imgArray);
   });
 }
 
@@ -44,10 +45,12 @@ for (var i = 0; i < 3; i++){
 var testimonialsHTML = '';
 
 // make a request for data from testimonials url and store in variable
-var dataRequest = $.getJSON(testURL);
+var dataRequestTestimonial = $.getJSON(testURL);
+
+
 
 // upon successful response .then( do ... )
-dataRequest.then( function(res) {
+dataRequestTestimonial.then( function(res) {
   // store results array in var results
   var results = res.results;
   // make a counter to help iterate through the image array from previous function
@@ -59,8 +62,6 @@ dataRequest.then( function(res) {
         userObject.name = testimonial.name;
         userObject.review = testimonial.review;
         userObject.testimonialImageURL = imgArray[counter];
-        console.log(userObject);
-        console.log(imgArray);
         // advance the counter
         counter += 1;
         var html = testimonials(userObject);
@@ -69,6 +70,10 @@ dataRequest.then( function(res) {
   // append each result user card to html section class=cardArea
   testimonialsArea.append(testimonialsHTML);
 });
+
+
+
+
 
   // // Make My Request
   // var dataRequest = $.getJSON(userURL);
