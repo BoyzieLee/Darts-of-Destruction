@@ -95,11 +95,10 @@ resultsRequest.then( function (res) {
     companyHTML += companyPics(company)
 
   });
+
   companies.append(companyHTML);
+
 });
-
-export default companyPics;
-
 
 //
 // ***** COMPANIES END *****
