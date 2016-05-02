@@ -3,7 +3,7 @@ import $ from 'jquery';
 import carousel from './templates/carousel';
 import testimonials from './templates/testimonials';
 import product from './templates/product';
-import companies from './templates/companies';
+// import companies from './templates/companies';
 
 
 // assign user api url to a variable for later use
