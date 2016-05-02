@@ -1,13 +1,40 @@
+$metalBlue: #4D5EA6;
+$background: #F6F8F7;
+$pGrey: #686A69;
+
+body {
+  background-color: $background;
+}
 .row  {
   padding: 1em 0px;
 }
 
+h1 {
+  color: $metalBlue;
+}
+h2 {
+  color: $metalBlue;
+  text-align: center;
+}
+p {
+  color: $pGrey;
+}
+
+.testimonialsOuter {
+  background-color: #EAECE7;
+
+button {
+  background-color: #E12C33;
+  color: white;
+  border-radius: 8px;
+  border-style: solid;
+}
 .map {
   pointer-events: none;
 }
 
 .logo {
-  width: 100px;
+  width: 60px;
   height: auto;
   display: inline-block;
 }
@@ -63,5 +90,24 @@
 
   .next {
     right: 5px;
+  }
+}
+
+// iframe {
+//   margin: 0;
+//   padding: 0;
+// }
+.socialIcons {
+  float: right;
+}
+
+footer {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0;
+  background-color: $metalBlue;
+  p {
+    color: $background;
+
   }
 }

@@ -15,7 +15,7 @@ function productTemplate (productData) {
 var dataRequest = $.getJSON('https://json-data.herokuapp.com/darts/info');
 
 dataRequest.then( function (product) {
-  console.log(product);
+  // console.log(product);
   var html = productTemplate(product);
   productDetails.append(html);
 
