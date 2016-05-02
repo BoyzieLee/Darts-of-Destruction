@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 var companies = $('.companies');
-// console.log(companies);
+console.log(companies);
 
 function companyPics (companies) {
   return `
@@ -21,4 +21,4 @@ resultsRequest.then( function (res) {
   });
 });
 
-export default companies;
+export default companyPics;
