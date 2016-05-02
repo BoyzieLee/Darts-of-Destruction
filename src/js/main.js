@@ -40,13 +40,12 @@ for (var i = 0; i < 3; i++){
   });
 }
 
-var timeoutID = window.setTimeout(console.log(imgArray), 5000);
-
 // make variable to hold testimonials HTML code
 var testimonialsHTML = '';
 
 // make a request for data from testimonials url and store in variable
 var dataRequest = $.getJSON(testURL);
+
 // upon successful response .then( do ... )
 dataRequest.then( function(res) {
   // store results array in var results
@@ -64,19 +63,12 @@ dataRequest.then( function(res) {
         console.log(imgArray);
         // advance the counter
         counter += 1;
-
         var html = testimonials(userObject);
         testimonialsHTML += html;
   });
-
   // append each result user card to html section class=cardArea
   testimonialsArea.append(testimonialsHTML);
-
 });
-
-
-
-
 
   // // Make My Request
   // var dataRequest = $.getJSON(userURL);
